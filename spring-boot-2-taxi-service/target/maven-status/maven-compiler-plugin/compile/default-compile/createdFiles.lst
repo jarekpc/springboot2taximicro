@@ -1,0 +1,8 @@
+model\Taxi.class
+service\TaxiService.class
+reo\TaxiRepository.class
+listener\TaxiBookingAcceptedEventMessageListener.class
+com\packtpub\springboot2taxiservice\controller\BaseController.class
+com\packtpub\springboot2taxiservice\SpringBoot2TaxiServiceApplication.class
+com\packtpub\springboot2taxiservice\controller\TaxiController.class
+exception\TaxiIdNotFoundException.class
