@@ -19,7 +19,6 @@ services:
       - db
 
 
-
   taxi-booking-service-app:
     image: packtpub-spring-boot-2/spring-boot-2-taxi-book-service:${APP_IMAGE_VERSION}
     build:
