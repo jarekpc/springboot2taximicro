@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
-import reo.TaxiRepository;
+import repo.TaxiRepository;
 import service.TaxiService;
 
 import java.util.UUID;
@@ -30,12 +30,12 @@ public class SpringBoot2TaxiServiceApplication {
     }
 
     @Bean
+
     public ApplicationRunner applicationRunner(TaxiRepository taxiRepository, TaxiService taxiService) {
 
         return args -> {
 
             taxiRepository.deleteAll();
-
 
 
             taxiRepository.save(new Taxi(UUID.randomUUID().toString(), TaxiType.MINI, TaxiStatus.AVAILABLE));
@@ -56,7 +56,8 @@ public class SpringBoot2TaxiServiceApplication {
 
     @Bean
 
-    public RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory, TaxiBookingAcceptedEventMessageListener taxiBookingAcceptedEventMessageListener) {
+    public RedisMessageListenerContainer container(RedisConnectionFactory connectionFactory, TaxiBookingAcceptedEventMessageListener
+            taxiBookingAcceptedEventMessageListener) {
 
         RedisMessageListenerContainer container = new RedisMessageListenerContainer();
 

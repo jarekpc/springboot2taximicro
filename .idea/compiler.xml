@@ -6,8 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-boot-2-taxi-service" />
         <module name="springboot2taxiconfig" />
+        <module name="spring-boot-2-taxi-service" />
         <module name="springboot2taximodel" />
         <module name="springboot2taxibookservice" />
       </profile>

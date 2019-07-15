@@ -9,6 +9,7 @@ import org.springframework.data.redis.serializer.RedisSerializationContext;
 
 @Configuration
 public class RedisConfig {
+
     public static final String ACCEPTED_EVENT_CHANNEL = "accepted_event_channel";
 
     @Bean
@@ -16,10 +17,10 @@ public class RedisConfig {
         return new LettuceConnectionFactory("db", 6379);
     }
 
+
     @Bean
     public ReactiveRedisTemplate<String, String> reactiveRedisTemplate(ReactiveRedisConnectionFactory connectionFactory) {
         return new ReactiveRedisTemplate<>(connectionFactory, RedisSerializationContext.string());
     }
-
 
 }

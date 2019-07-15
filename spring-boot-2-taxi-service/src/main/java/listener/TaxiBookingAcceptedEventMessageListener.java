@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.redis.connection.Message;
 import org.springframework.data.redis.connection.MessageListener;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 import service.TaxiService;
 
@@ -23,24 +24,17 @@ public class TaxiBookingAcceptedEventMessageListener implements MessageListener 
 
 
     public TaxiBookingAcceptedEventMessageListener(TaxiService taxiService) {
-
         this.taxiService = taxiService;
-
     }
 
     @Override
-    public void onMessage(Message message, byte[] bytes) {
+    public void onMessage(Message message, @Nullable byte[] bytes) {
         try {
             TaxiBookingAcceptedEventDTO taxiBookingAcceptedEventDTO = objectMapper.readValue(new String(message.getBody()), TaxiBookingAcceptedEventDTO.class);
-
             LOGGER.info("Accepted Event {}", taxiBookingAcceptedEventDTO);
-
             taxiService.updateTaxiStatus(taxiBookingAcceptedEventDTO.getTaxiId(), TaxiStatus.OCCUPIED);
-
         } catch (IOException e) {
-
             LOGGER.error("Error while updating taxi status", e);
-
         }
     }
 }

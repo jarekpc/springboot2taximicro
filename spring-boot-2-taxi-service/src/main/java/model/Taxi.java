@@ -10,6 +10,7 @@ import org.springframework.data.redis.core.RedisHash;
 
 import java.io.Serializable;
 
+
 @RedisHash("Taxi")
 @Data
 @AllArgsConstructor

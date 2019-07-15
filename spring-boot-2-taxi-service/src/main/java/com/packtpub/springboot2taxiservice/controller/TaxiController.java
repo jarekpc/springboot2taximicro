@@ -30,7 +30,9 @@ import service.TaxiService;
 
 
 @RequestMapping("/taxis")
+
 @RestController
+
 public class TaxiController {
 
     private final TaxiService taxiService;
@@ -39,31 +41,32 @@ public class TaxiController {
         this.taxiService = taxiService;
     }
 
-    @PostMapping
-    public Mono<TaxiRegisterEventResponseDTO> register(@RequestBody TaxiRegisterEventDTO taxiRegisterEventDTO){
-        return taxiService.register(taxiRegisterEventDTO).map(t -> new TaxiRegisterEventResponseDTO(t.getTaxiId()));
+    @GetMapping
+    public Flux<TaxiAvailableResponseDTO> getAvailableTaxis(@RequestParam("type") TaxiType taxiType, @RequestParam("latitude") Double latitude, @RequestParam("longitude") Double longitude, @RequestParam(value = "radius", defaultValue = "1") Double radius) {
+        Flux<GeoResult<RedisGeoCommands.GeoLocation<String>>> availableTaxisFlux = taxiService.getAvailableTaxis(taxiType, latitude, longitude, radius);
+        return availableTaxisFlux.map(r -> new TaxiAvailableResponseDTO(r.getContent().getName()));
     }
 
-    @PutMapping("/{taxiId}/location")
-    public Mono<TaxiLocationUpdatedEventResponseDTO> updateLocation(@PathVariable("taxiId")String taxiId, @RequestBody LocationDTO locationDTO){
-        return taxiService.updateLocation(taxiId, locationDTO).map(t -> new TaxiLocationUpdatedEventResponseDTO(taxiId));
+
+    @GetMapping("/{taxiId}/status")
+    public Mono<TaxiStatusDTO> getTaxiStatus(@PathVariable("taxiId") String taxiId) {
+        return taxiService.getTaxiStatus(taxiId).map(s -> new TaxiStatusDTO(taxiId, s));
     }
 
     @PutMapping("/{taxiId}/status")
-    public Mono<TaxiStatusDTO> updateTaxiStatus(@PathVariable("taxiId")String taxiId, @RequestParam("status") TaxiStatus taxiStatus){
+    public Mono<TaxiStatusDTO> updateTaxiStatus(@PathVariable("taxiId") String taxiId, @RequestParam("status") TaxiStatus taxiStatus) {
         return taxiService.updateTaxiStatus(taxiId, taxiStatus).map(t -> new TaxiStatusDTO(t.getTaxiId(), t.getTaxiStatus()));
     }
 
-    @GetMapping("/{taxiId}/status")
-    public Mono<TaxiStatusDTO> getTaxiStatus(@PathVariable("taxiId") String taxiId){
-        return taxiService.getTaxiStatus(taxiId).map(s -> new TaxiStatusDTO(taxiId,s));
+    @PutMapping("/{taxiId}/location")
+    public Mono<TaxiLocationUpdatedEventResponseDTO> updateLocation(@PathVariable("taxiId") String taxiId, @RequestBody LocationDTO locationDTO) {
+        return taxiService.updateLocation(taxiId, locationDTO).map(t -> new TaxiLocationUpdatedEventResponseDTO(taxiId));
     }
 
-    @GetMapping
-    public Flux<TaxiAvailableResponseDTO> getAvailableTaxis(@RequestParam("type")TaxiType taxiType, @RequestParam("latitude") Double latitude, @RequestParam("longitude") Double longitude,
-                                                            @RequestParam(value = "radius", defaultValue = "1")Double radius){
-        Flux<GeoResult<RedisGeoCommands.GeoLocation<String>>> availableTaxisFlux = taxiService.getAvailableTaxis(taxiType, latitude, longitude, radius);
-        return availableTaxisFlux.map(r -> new TaxiAvailableResponseDTO(r.getContent().getName()));
+    @PostMapping
+    public Mono<TaxiRegisterEventResponseDTO> register(@RequestBody TaxiRegisterEventDTO taxiRegisterEventDTO) {
+        return taxiService.register(taxiRegisterEventDTO).map(t -> new TaxiRegisterEventResponseDTO(t.getTaxiId()));
+
     }
 
 
