@@ -1,10 +1,14 @@
-version: '2'
+version: '3'
 
 services:
 
   taxi-service-app:
 
-    build: ./spring-boot-2-taxi-service/target
+    build:
+      context: .
+      dockerfile: ./spring-boot-2-taxi-service/src/main/resources/docker/Dockerfile
+      args:
+        JAR_FILE: ./spring-boot-2-taxi-service/target/spring-boot-2-taxi-service-1.0-SNAPSHOT.jar
 
     networks:
 
@@ -18,7 +22,11 @@ services:
 
   taxi-booking-service-app:
 
-    build: ./spring-boot-2-taxi-booking-service/target
+    build:
+      context: .
+      dockerfile: ./spring-boot-2-taxi-book-service/src/main/resources/docker/Dockerfile
+      args:
+        JAR_FILE: ./spring-boot-2-taxi-book-service/target/spring-boot-2-taxi-book-service-1.0-SNAPSHOT.jar
 
     networks:
 
@@ -72,7 +80,7 @@ services:
 
       - taxi-service-app
 
-      - taxi-booking-service-app
+#      - taxi-booking-service-app
 
 
 
