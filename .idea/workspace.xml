@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d487393b-9587-463c-a15d-a50d3e625d03" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/classes/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/classes/docker/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/docker/image-id" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/docker/image-id" afterDir="false" />
@@ -14,22 +11,8 @@
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/spring-boot-2-taxi-book-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/spring-boot-2-taxi-book-service-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/spring-boot-2-taxi-book-service-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/spring-boot-2-taxi-book-service-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/test-classes/META-INF/docker/com.packtpub/spring-boot-2-taxi-book-service/image-id" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-book-service/target/test-classes/META-INF/docker/com.packtpub/spring-boot-2-taxi-book-service/image-id" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-config/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-config/src/main/java/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-config/src/main/java/config/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-config/target/spring-boot-2-taxi-config-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-config/target/spring-boot-2-taxi-config-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-model/src/main/java/com/packtpub/springboot2taximodel/converter/LocationToPointConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-model/src/main/java/com/packtpub/springboot2taximodel/converter/LocationToPointConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-model/src/main/java/com/packtpub/springboot2taximodel/converter/PointToLocationConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-model/src/main/java/com/packtpub/springboot2taximodel/converter/PointToLocationConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-model/src/main/java/com/packtpub/springboot2taximodel/dto/request/LocationDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-model/src/main/java/com/packtpub/springboot2taximodel/dto/request/LocationDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-model/src/main/java/com/packtpub/springboot2taximodel/util/LocationGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-model/src/main/java/com/packtpub/springboot2taximodel/util/LocationGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-model/target/spring-boot-2-taxi-model-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-model/target/spring-boot-2-taxi-model-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/com/packtpub/springboot2taxiservice/SpringBoot2TaxiServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/com/packtpub/springboot2taxiservice/SpringBoot2TaxiServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/com/packtpub/springboot2taxiservice/controller/TaxiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/com/packtpub/springboot2taxiservice/controller/TaxiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/listener/TaxiBookingAcceptedEventMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/listener/TaxiBookingAcceptedEventMessageListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/model/Taxi.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/model/Taxi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/reo/TaxiRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/repo/TaxiRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/service/TaxiService.java" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/java/service/TaxiService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/resources/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/src/main/resources/docker/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/target/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/target/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/target/classes/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/target/classes/docker/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/spring-boot-2-taxi-service/target/docker/image-id" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-2-taxi-service/target/docker/image-id" afterDir="false" />
@@ -321,6 +304,7 @@
       <workItem from="1563187025508" duration="323000" />
       <workItem from="1563187377355" duration="6000" />
       <workItem from="1563188847639" duration="259000" />
+      <workItem from="1563197404992" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="added a all project">
       <created>1562937974294</created>
@@ -343,16 +327,23 @@
       <option name="project" value="LOCAL" />
       <updated>1563176689121</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added a corrected Dockerfile and docker-compose">
+      <created>1563197441274</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1563197441274</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23391000" />
+    <option name="totallyTimeSpent" value="23445000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49888888" visible="true" weight="0.22334754" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49888888" visible="true" weight="0.22547974" />
       <window_info id="Structure" order="1" sideWeight="0.5011111" side_tool="true" weight="0.17430703" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
