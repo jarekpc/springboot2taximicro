@@ -4,9 +4,9 @@ package com.packtpub.springboot2taxiservice;
 import com.packtpub.springboot2taximodel.enums.TaxiStatus;
 import com.packtpub.springboot2taximodel.enums.TaxiType;
 import com.packtpub.springboot2taximodel.util.LocationGenerator;
-import config.RedisConfig;
-import listener.TaxiBookingAcceptedEventMessageListener;
-import model.Taxi;
+import com.packtpub.springboot2taxiconfig.config.RedisConfig;
+import com.packtpub.springboot2taxiservice.listener.TaxiBookingAcceptedEventMessageListener;
+import com.packtpub.springboot2taxiservice.model.Taxi;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
-import repo.TaxiRepository;
-import service.TaxiService;
+import com.packtpub.springboot2taxiservice.repo.TaxiRepository;
+import com.packtpub.springboot2taxiservice.service.TaxiService;
 
 import java.util.UUID;
 

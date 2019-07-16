@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.*;
 
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-import service.TaxiService;
+import com.packtpub.springboot2taxiservice.service.TaxiService;
 
 
 @RequestMapping("/taxis")
